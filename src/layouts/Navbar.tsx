@@ -21,10 +21,10 @@ const Navbar: React.FC = () => {
                         {/* Logo */}
                         <div className="flex items-center gap-2 group cursor-pointer z-[110]">
                             <div className="w-10 h-10 bg-[#BCFE00] rounded-lg flex items-center justify-center transform -rotate-12 transition-transform group-hover:rotate-0">
-                                <span className="text-black font-black text-2xl italic">P</span>
+                                <span className="text-black font-black text-2xl italic">IP</span>
                             </div>
                             <div className="flex flex-col leading-none">
-                                <span className="text-white font-black italic tracking-tighter text-lg uppercase transition-colors group-hover:text-[#BCFE00]">PUREPERFORMANCE</span>
+                                <span className="text-white font-black italic tracking-tighter text-lg uppercase transition-colors group-hover:text-[#BCFE00]">Iron Pulse</span>
                                 <span className="text-white font-medium tracking-[0.2em] text-[10px] ml-0.5">PLANS</span>
                             </div>
                         </div>
