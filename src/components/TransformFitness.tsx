@@ -27,11 +27,11 @@ const TransformFitness: React.FC = () => {
     ];
 
     return (
-        <section id="how-it-works" className="bg-black text-white py-24 px-6 lg:px-12 relative overflow-hidden">
-            {/* Global Decorative Blobs */}
+        <section id="how-it-works" className="bg-white py-24 px-6 lg:px-12 relative overflow-hidden">
+            {/* Global Decorative Blobs - Lightened for White BG */}
             <div className="absolute top-0 left-0 w-full h-full pointer-events-none z-0">
-                <div className="absolute top-[10%] left-[-10%] w-[40%] h-[40%] bg-[#F5FFE0] blur-[100px] rounded-full opacity-30"></div>
-                <div className="absolute bottom-[20%] right-[-10%] w-[30%] h-[30%] bg-[#F9FFF0] blur-[80px] rounded-full opacity-40"></div>
+                <div className="absolute top-[10%] left-[-10%] w-[40%] h-[40%] bg-[#F5FFE0] blur-[100px] rounded-full opacity-60"></div>
+                <div className="absolute bottom-[20%] right-[-10%] w-[30%] h-[30%] bg-[#F9FFF0] blur-[80px] rounded-full opacity-80"></div>
             </div>
 
             <div className="max-w-6xl mx-auto relative z-10">
@@ -52,14 +52,13 @@ const TransformFitness: React.FC = () => {
                             key={idx}
                             className={`flex flex-col ${block.reversed ? 'lg:flex-row-reverse' : 'lg:flex-row'} items-center gap-12 lg:gap-24 relative group`}
                         >
-                            {/* Decorative Background Layers - Enhanced */}
-                            <div className={`absolute -inset-10 z-0 pointer-events-none hidden lg:block ${block.reversed ? 'right-0' : 'left-0'}`}>
-                                <div className={`absolute top-0 ${block.reversed ? 'right-0' : 'left-0'} w-3/4 h-full bg-gradient-to-br from-[#F5FFE0] to-[#F9FFF0] rounded-[60px] -rotate-3 -z-10 opacity-60 backdrop-blur-sm`}></div>
-                                <div className={`absolute -bottom-10 ${block.reversed ? 'left-20' : 'right-20'} w-1/2 h-1/2 border border-[#BCFE00]/20 rounded-full rotate-12 -z-10`}></div>
+                            {/* Decorative Background Layers - Light Lime Bubbles */}
+                            <div className={`absolute -inset-10 z-0 pointer-events-none hidden lg:block ${block.reversed ? 'left-[-40%]' : 'right-[-40%]'}`}>
+                                <div className={`absolute top-0 ${block.reversed ? 'left-0' : 'right-0'} w-[100%] h-[120%] bg-[#F9FFF0] blur-[100px] rounded-full opacity-70`}></div>
                             </div>
 
                             {/* Text Part */}
-                            <div className="flex-1 text-center lg:text-left z-10 transition-transform duration-500 group-hover:translate-x-2">
+                            <div className="flex-1 text-center lg:text-left z-10">
                                 {/* Decorative Accent */}
                                 <div className="flex gap-1 mb-6 justify-center lg:justify-start">
                                     <div className="w-2 h-4 bg-[#BCFE00] -skew-x-12"></div>
@@ -67,13 +66,13 @@ const TransformFitness: React.FC = () => {
                                     <div className="w-2 h-4 bg-[#BCFE00] -skew-x-12"></div>
                                 </div>
 
-                                <h3 className="text-3xl md:text-4xl font-black italic tracking-tighter text-black leading-tight mb-4 max-w-sm mx-auto lg:mx-0">
+                                <h3 className="text-3xl md:text-4xl font-black italic tracking-tighter text-black leading-[0.9] mb-4 max-w-sm mx-auto lg:mx-0">
                                     {block.title}
                                 </h3>
-                                <p className="text-gray-600 font-medium mb-8 max-w-sm mx-auto lg:mx-0">
+                                <p className="text-gray-500 font-bold text-sm mb-8 max-w-sm mx-auto lg:mx-0">
                                     {block.desc}
                                 </p>
-                                <button className="bg-[#BCFE00] text-black px-8 py-3 rounded-full font-bold text-sm tracking-tighter hover:bg-black hover:text-[#BCFE00] transition-all shadow-lg hover:shadow-[#BCFE00]/40">
+                                <button className="bg-[#BCFE00] text-black px-6 py-2.5 rounded-full font-black italic text-xs uppercase hover:scale-105 transition-transform shadow-lg shadow-[#BCFE00]/20">
                                     {block.btnText}
                                 </button>
                             </div>
@@ -87,53 +86,52 @@ const TransformFitness: React.FC = () => {
                                         className="w-full aspect-[4/3] object-cover transition-transform duration-700 group-hover/img:scale-110"
                                     />
 
-                                    {/* Digital HUD Overlay for the 3rd block */}
+                                    {/* HUD Elements for the 3rd block */}
                                     {block.isHUD && (
-                                        <div className="absolute inset-0 bg-black/20 flex flex-col justify-between p-6 pointer-events-none">
+                                        <div className="absolute inset-0 bg-black/30 flex flex-col justify-between p-6 pointer-events-none">
+                                            {/* HUD Top */}
                                             <div className="flex justify-between items-start">
-                                                <div className="bg-[#BCFE00]/90 text-black text-[10px] font-black px-2 py-1 rounded-sm tracking-widest uppercase">Live Metrics</div>
-                                                <div className="text-white flex gap-1">
-                                                    {[1, 2, 3].map(i => <div key={i} className={`w-1 h-${i * 2} bg-[#BCFE00]`}></div>)}
+                                                <div className="flex gap-1">
+                                                    {[40, 60, 80].map((size, i) => (
+                                                        <div key={i} className={`w-8 h-8 md:w-10 md:h-10 border-2 border-[#BCFE00]/40 rounded-full flex items-center justify-center`}>
+                                                            <div className={`w-[${size}%] h-[${size}%] border border-[#BCFE00] rounded-full`}></div>
+                                                        </div>
+                                                    ))}
+                                                </div>
+                                                <div className="text-[#BCFE00] flex flex-col items-center">
+                                                    <div className="w-10 h-10 border border-[#BCFE00] rounded-lg flex items-center justify-center">
+                                                        <div className="w-6 h-6 border-2 border-dashed border-[#BCFE00] rounded-full animate-spin"></div>
+                                                    </div>
                                                 </div>
                                             </div>
+                                            {/* HUD Bottom */}
                                             <div className="flex items-end justify-between">
-                                                <div className="flex gap-4">
-                                                    <div className="text-white">
-                                                        <div className="text-[10px] text-white/60 uppercase font-black">BPM</div>
-                                                        <div className="text-2xl font-black italic">142</div>
-                                                    </div>
-                                                    <div className="text-[#BCFE00]">
-                                                        <div className="text-[10px] text-white/60 uppercase font-black">KCAL</div>
-                                                        <div className="text-2xl font-black italic tracking-tighter">482</div>
-                                                    </div>
+                                                <div className="w-12 h-12 border border-[#BCFE00]/30 rounded-full flex items-center justify-center backdrop-blur-sm">
+                                                    <div className="w-8 h-[1px] bg-[#BCFE00] rotate-45"></div>
+                                                    <div className="w-8 h-[1px] bg-[#BCFE00] -rotate-45 absolute"></div>
                                                 </div>
-                                                <div className="w-24 h-12 border-b border-r border-[#BCFE00]/40 flex items-center justify-center">
-                                                    <div className="w-full h-[1px] bg-gradient-to-r from-transparent via-[#BCFE00] to-transparent animate-pulse"></div>
+                                                <div className="flex flex-col items-end">
+                                                    <div className="w-24 h-6 border border-[#BCFE00]/20 rounded-md bg-[#BCFE00]/10 overflow-hidden">
+                                                        <div className="h-full bg-[#BCFE00] w-[70%]"></div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     )}
-
-                                    {/* Glass Frame Overlay */}
-                                    <div className="absolute inset-0 border-[1px] border-white/10 rounded-[40px] pointer-events-none"></div>
                                 </div>
 
-                                {/* Corner Accents */}
-                                <div className="absolute -top-4 -right-4 w-12 h-12 border-t-4 border-r-4 border-[#BCFE00] hidden lg:block z-20"></div>
-                                <div className="absolute -bottom-4 -left-4 w-12 h-12 border-b-4 border-l-4 border-gray-100 hidden lg:block z-20"></div>
+                                {/* Corner Accents - Minimalist as per screenshot */}
+                                <div className="absolute -top-4 -right-4 w-12 h-12 border-t-4 border-r-4 border-[#BCFE00]/20 hidden lg:block z-0"></div>
                             </div>
                         </div>
                     ))}
                 </div>
 
                 {/* Global Action Button */}
-                <div className="mt-32 text-center group">
-                    <div className="relative inline-block">
-                        <div className="absolute inset-0 bg-[#BCFE00] blur-2xl opacity-20 group-hover:opacity-40 transition-opacity"></div>
-                        <button className="relative bg-[#BCFE00] text-black px-16 py-5 rounded-[20px] font-black text-xl italic tracking-tighter hover:scale-105 transition-transform shadow-[0_20px_40px_rgba(188,254,0,0.3)] hover:shadow-[#BCFE00]/60 uppercase border-b-4 border-black/10">
-                            START NOW
-                        </button>
-                    </div>
+                <div className="mt-32 text-center">
+                    <button className="bg-[#BCFE00] text-black px-12 py-4 rounded-full font-black italic text-xl tracking-tighter hover:scale-110 transition-transform shadow-xl shadow-[#BCFE00]/30 uppercase">
+                        START NOW
+                    </button>
                 </div>
             </div>
         </section>
