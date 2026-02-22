@@ -3,7 +3,7 @@ import { FaXTwitter, FaInstagram, FaFacebookF } from "react-icons/fa6";
 
 const Hero: React.FC = () => {
   return (
-    <div className="relative pt-20 overflow-hidden bg-black">
+    <section id="home" className="relative min-h-[90vh] flex items-center pt-24 overflow-hidden bg-black">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img
@@ -73,7 +73,7 @@ const Hero: React.FC = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

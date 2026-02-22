@@ -37,7 +37,7 @@ const Testimonials: React.FC = () => {
     ];
 
     return (
-        <section className="bg-white py-24 px-6 lg:px-12 relative overflow-hidden testimonials-swiper">
+        <section id="testimonials" className="bg-white py-24 px-6 lg:px-12 relative overflow-hidden testimonials-swiper">
             {/* Background Decorative Layers */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full pointer-events-none -z-10">
                 <div className="absolute top-[20%] left-[10%] w-[30%] h-[30%] bg-[#F5FFE0] blur-[120px] rounded-full opacity-40"></div>

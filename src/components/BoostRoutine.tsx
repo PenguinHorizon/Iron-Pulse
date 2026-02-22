@@ -26,7 +26,8 @@ const BoostRoutine: React.FC = () => {
     ];
 
     return (
-        <section className="bg-white py-24 px-6 lg:px-12">
+        <section id="service" className="bg-white py-24 px-6 lg:px-12 relative overflow-hidden">
+            {/* Background Decorative Layers */}
             <div className="max-w-7xl mx-auto">
                 {/* Section Header */}
                 <div className="text-center mb-20">

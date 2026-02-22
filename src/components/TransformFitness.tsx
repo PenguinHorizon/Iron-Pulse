@@ -27,7 +27,7 @@ const TransformFitness: React.FC = () => {
     ];
 
     return (
-        <section className="bg-white py-24 pb-32 px-6 lg:px-12 relative overflow-hidden">
+        <section id="how-it-works" className="bg-black text-white py-24 px-6 lg:px-12 relative overflow-hidden">
             {/* Global Decorative Blobs */}
             <div className="absolute top-0 left-0 w-full h-full pointer-events-none z-0">
                 <div className="absolute top-[10%] left-[-10%] w-[40%] h-[40%] bg-[#F5FFE0] blur-[100px] rounded-full opacity-30"></div>

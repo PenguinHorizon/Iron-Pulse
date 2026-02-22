@@ -42,7 +42,7 @@ const PricingPlans: React.FC = () => {
     ];
 
     return (
-        <section className="bg-white py-24 px-6 lg:px-12 relative overflow-hidden">
+        <section id="pricing" className="bg-white py-24 px-6 lg:px-12 relative overflow-hidden">
             {/* Decorative Background Layers */}
             <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-[#F5FFE0] blur-[120px] rounded-full opacity-20 -z-10"></div>
             <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-[#F9FFF0] blur-[100px] rounded-full opacity-30 -z-10"></div>
