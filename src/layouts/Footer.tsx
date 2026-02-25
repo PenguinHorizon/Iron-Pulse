@@ -60,7 +60,7 @@ const Footer: React.FC = () => {
                   href="#service"
                   className="hover:text-[#BCFE00] transition-colors"
                 >
-                  Service
+                  Routine
                 </a>
               </li>
               <li>
@@ -68,7 +68,7 @@ const Footer: React.FC = () => {
                   href="#how-it-works"
                   className="hover:text-[#BCFE00] transition-colors"
                 >
-                  How It Works
+                  Fitness
                 </a>
               </li>
               <li>
